@@ -12,12 +12,12 @@ class Song
   
   def initialize(name)
     @name = name
-     @genre = genre
+    @genre = genre
      save
     
   end  
   
-  def save
+ def save
     @@all << self
     
   end  
@@ -30,11 +30,8 @@ class Song
   
   
   def artist_name
- 
-   if artist.name
-       artist.name
-   
- end 
-end  
+    self.artist.name  if
+   self.artist
+  end  
   
 end  
